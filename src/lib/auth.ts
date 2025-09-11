@@ -79,13 +79,13 @@ class LocalAuth {
       const demoUser: User = {
         id: 'demo-user',
         email: 'demo',
-        name: 'デモユーザー',
-        company: '株式会社デモ',
+        name: '山田太郎',
+        company: '株式会社エンタープライズ',
         position: '代表取締役',
-        phone: '090-0000-0000',
+        phone: '03-1234-5678',
         role: 'admin',
-        plan: 'Pro',
-        departmentId: 'dept-000',
+        plan: 'Enterprise',
+        departmentId: 'dept-001',
         departmentName: '経営企画部',
         createdAt: new Date().toISOString()
       };
@@ -93,10 +93,11 @@ class LocalAuth {
       // デモモードフラグを設定
       localStorage.setItem('demoMode', 'true');
       localStorage.setItem('userProfile', JSON.stringify({
-        full_name: 'デモユーザー',
+        full_name: '山田太郎',
         position: '代表取締役',
         role: 'admin',
-        currentPlan: 'Pro'
+        currentPlan: 'Enterprise',
+        departmentName: '経営企画部'
       }));
 
       this.authState = {
